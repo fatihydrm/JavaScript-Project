@@ -63,7 +63,7 @@ body {
       height: 6px;
       position: absolute;
       background-color: #222;
-      top: 40px;
+      top: 41px;
       left: 50px;
 
       &::after {
@@ -113,6 +113,21 @@ body {
         background: #222;
         transform-origin: left center;
         transform: rotate(-135deg) translate(2px,88px);
+      }
+      .left-foot {
+        width: 50px;
+        height: 4px;
+        background: #222;
+        transform-origin: left center;
+        transform: rotate(135deg) translate(-28px,-8px);
+      }
+      
+      .right-foot {
+        width: 50px;
+        height: 4px;
+        background: #222;
+        transform-origin: left center;
+        transform: rotate(-135deg) translate(-54px,30px);
       }
     }
   }
