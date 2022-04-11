@@ -79,7 +79,6 @@ body {
     .man {
       height: 220px;
       width: 140px;
-      background-color: rgba(0, 0, 0, 0.2);
       position: absolute;
       top: 83px;
       left: 130px;
@@ -104,30 +103,30 @@ body {
         height: 4px;
         background: #222;
         transform-origin: left center;
-        transform: rotate(135deg) translate(-84px,50px);
+        transform: rotate(135deg) translate(-84px, 50px);
       }
-      
+
       .right-hand {
         width: 50px;
         height: 4px;
         background: #222;
         transform-origin: left center;
-        transform: rotate(-135deg) translate(2px,88px);
+        transform: rotate(-135deg) translate(2px, 88px);
       }
       .left-foot {
         width: 50px;
         height: 4px;
         background: #222;
         transform-origin: left center;
-        transform: rotate(135deg) translate(-28px,-8px);
+        transform: rotate(135deg) translate(-28px, -8px);
       }
-      
+
       .right-foot {
         width: 50px;
         height: 4px;
         background: #222;
         transform-origin: left center;
-        transform: rotate(-135deg) translate(-54px,30px);
+        transform: rotate(-135deg) translate(-54px, 30px);
       }
     }
   }
@@ -136,34 +135,58 @@ body {
     flex: 1;
     border-top: 4px solid #444;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    flex-direction: column;
     padding: 0 40px;
-    gap: 10px;
 
-    .inputText {
-      flex: 1;
-      font-size: 19px;
-      padding: 2px 4px;
-      border: 2px solid #444;
-      border-radius: 2px;
-      background: #fff;
-      font-weight: 500;
-      color: #444;
+    .top {
+      display: flex;
+      width: 114%;
+      height: 40px;
+      align-items: center;
+      justify-content: space-around;
+      font-size: 24px;
+      font-weight: bold;
+
+      .l {
+        border-bottom: 2px solid #222;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        justify-content: center;
+      }
     }
-    .textBtn {
-      padding: 6px 20px;
-      border: none;
-      cursor: pointer;
-      border: 2px solid #444;
-      border-radius: 2px;
-      background: #fff;
-      &:active {
-        background: #eee;
+    .bottom {
+      display: flex;
+      gap: 10px;
+      .inputText {
+        flex: 1;
+        font-size: 19px;
+        padding: 2px 4px;
+        border: 2px solid #444;
+        border-radius: 2px;
+        background: #fff;
+        font-weight: 500;
+        color: #222;
+        text-align: center;
+      }
+      .textBtn {
+        padding: 6px 20px;
+        border: none;
+        cursor: pointer;
+        border: 2px solid #444;
+        border-radius: 2px;
+        background: #fff;
+        font-weight: 500;
+        font-size: 14px;
+        &:active {
+          background: #eee;
+        }
       }
     }
   }
-  .clue {
+  .restart {
     position: absolute;
     width: 34px;
     height: 34px;
@@ -186,27 +209,21 @@ body {
       width: 20px;
     }
   }
-  .restart {
+  .score {
     position: absolute;
-    width: 34px;
-    height: 34px;
+    top: 8px;
+    right: 70px;
+    font-size: 24px;
+  }
+  .olmeNedeni-container{
+    position: absolute;
     display: flex;
-    justify-content: center;
     align-items: center;
-    border: none;
-    cursor: pointer;
-    border: 2px solid #444;
-    border-radius: 2px;
-    position: absolute;
-    right: 10px;
-    top: 55px;
-    background: #fff;
-    &:active {
-      background: #eee;
-    }
-
-    svg {
-      width: 20px;
-    }
+    justify-content: flex-start;
+    bottom: 152px;
+    right: 0px;
+    font-weight: 500;
+    gap: 6px;
+    width: 220px;
   }
 }

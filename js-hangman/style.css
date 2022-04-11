@@ -86,7 +86,6 @@ body {
 .container .human .man {
   height: 220px;
   width: 140px;
-  background-color: rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 83px;
   left: 130px;
@@ -146,13 +145,36 @@ body {
   flex: 1;
   border-top: 4px solid #444;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  flex-direction: column;
   padding: 0 40px;
+}
+
+.container .input .top {
+  display: flex;
+  width: 114%;
+  height: 40px;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.container .input .top .l {
+  border-bottom: 2px solid #222;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+}
+
+.container .input .bottom {
+  display: flex;
   gap: 10px;
 }
 
-.container .input .inputText {
+.container .input .bottom .inputText {
   flex: 1;
   font-size: 19px;
   padding: 2px 4px;
@@ -160,23 +182,26 @@ body {
   border-radius: 2px;
   background: #fff;
   font-weight: 500;
-  color: #444;
+  color: #222;
+  text-align: center;
 }
 
-.container .input .textBtn {
+.container .input .bottom .textBtn {
   padding: 6px 20px;
   border: none;
   cursor: pointer;
   border: 2px solid #444;
   border-radius: 2px;
   background: #fff;
+  font-weight: 500;
+  font-size: 14px;
 }
 
-.container .input .textBtn:active {
+.container .input .bottom .textBtn:active {
   background: #eee;
 }
 
-.container .clue {
+.container .restart {
   position: absolute;
   width: 34px;
   height: 34px;
@@ -193,36 +218,30 @@ body {
   background: #fff;
 }
 
-.container .clue:active {
-  background: #eee;
-}
-
-.container .clue svg {
-  width: 20px;
-}
-
-.container .restart {
-  position: absolute;
-  width: 34px;
-  height: 34px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  cursor: pointer;
-  border: 2px solid #444;
-  border-radius: 2px;
-  position: absolute;
-  right: 10px;
-  top: 55px;
-  background: #fff;
-}
-
 .container .restart:active {
   background: #eee;
 }
 
 .container .restart svg {
   width: 20px;
+}
+
+.container .score {
+  position: absolute;
+  top: 8px;
+  right: 70px;
+  font-size: 24px;
+}
+
+.container .olmeNedeni-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  bottom: 152px;
+  right: 0px;
+  font-weight: 500;
+  gap: 6px;
+  width: 220px;
 }
 /*# sourceMappingURL=style.css.map */
