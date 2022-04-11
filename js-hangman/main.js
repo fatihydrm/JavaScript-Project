@@ -4,7 +4,7 @@ let nasilOldu = [
   "Silah ile",
   "Asılarak",
   "Boğularak",
-  "Uçurumdan Uçurumdan düşerek",
+  "Uçurumdan düşerek",
   "Fırlatılarak",
 ];
 let randomOlum = Math.floor(Math.random() * 6);
@@ -85,7 +85,6 @@ testBtn.onclick = () => {
         letter[4].innerHTML = "";
         letter[5].innerHTML = "";
         olmeNedeni.innerHTML = nasilOldu[randomOlum];
-
       }
     }
   } else if (inputText.value.length == 1 && lettersCount == 1) {
