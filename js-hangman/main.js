@@ -1,15 +1,7 @@
 let letters = ["TAKTIK", "PIJAMA", "ATMACA", "GORMEK", "CAYLAK", "VARLIK"];
-let nasilOldu = [
-  "Biçaklanarak",
-  "Silah ile",
-  "Asılarak",
-  "Boğularak",
-  "Uçurumdan düşerek",
-  "Fırlatılarak",
-];
-let randomOlum = Math.floor(Math.random() * 6);
 let score = document.querySelector("#score");
 let letter = document.querySelectorAll(".l");
+let uzuv = document.querySelectorAll(".uzuv");
 let testBtn = document.querySelector("#testBtn");
 let inputText = document.querySelector("#inputText");
 let olmeNedeni = document.querySelector("#olmeNedeni");
@@ -26,6 +18,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[0].classList.add("active");
     } else if (
       letters[0][1] == inputText.value.toLocaleUpperCase() &&
       letter[1].innerHTML == ""
@@ -34,6 +27,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[1].classList.add("active");
     } else if (
       letters[0][2] == inputText.value.toLocaleUpperCase() &&
       letter[2].innerHTML == ""
@@ -42,6 +36,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[2].classList.add("active");
     } else if (
       letters[0][3] == inputText.value.toLocaleUpperCase() &&
       letter[3].innerHTML == ""
@@ -50,6 +45,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[3].classList.add("active");
     } else if (
       letters[0][4] == inputText.value.toLocaleUpperCase() &&
       letter[4].innerHTML == ""
@@ -58,6 +54,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[4].classList.add("active");
     } else if (
       letters[0][5] == inputText.value.toLocaleUpperCase() &&
       letter[5].innerHTML == ""
@@ -66,6 +63,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[5].classList.add("active");
     }
     for (let i = 0; i < letter.length; i++) {
       if (
@@ -84,7 +82,22 @@ testBtn.onclick = () => {
         letter[3].innerHTML = "";
         letter[4].innerHTML = "";
         letter[5].innerHTML = "";
+        let nasilOldu = [
+          "Biçaklanarak",
+          "Silah ile",
+          "Asılarak",
+          "Boğularak",
+          "Uçurumdan düşerek",
+          "Fırlatılarak",
+        ];
+        let randomOlum = Math.floor(Math.random() * 6);
         olmeNedeni.innerHTML = nasilOldu[randomOlum];
+        uzuv[0].classList.remove("active");
+        uzuv[1].classList.remove("active");
+        uzuv[2].classList.remove("active");
+        uzuv[3].classList.remove("active");
+        uzuv[4].classList.remove("active");
+        uzuv[5].classList.remove("active");
       }
     }
   } else if (inputText.value.length == 1 && lettersCount == 1) {
@@ -96,6 +109,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[0].classList.add("active");
     } else if (
       letters[1][1] == inputText.value.toLocaleUpperCase() &&
       letter[1].innerHTML == ""
@@ -104,6 +118,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[1].classList.add("active");
     } else if (
       letters[1][2] == inputText.value.toLocaleUpperCase() &&
       letter[2].innerHTML == ""
@@ -112,6 +127,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[2].classList.add("active");
     } else if (
       letters[1][3] == inputText.value.toLocaleUpperCase() &&
       letter[3].innerHTML == ""
@@ -120,6 +136,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[3].classList.add("active");
     } else if (
       letters[1][4] == inputText.value.toLocaleUpperCase() &&
       letter[4].innerHTML == ""
@@ -128,6 +145,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[4].classList.add("active");
     } else if (
       letters[1][5] == inputText.value.toLocaleUpperCase() &&
       letter[5].innerHTML == ""
@@ -136,6 +154,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[5].classList.add("active");
     }
     for (let i = 0; i < letter.length; i++) {
       if (
@@ -154,7 +173,22 @@ testBtn.onclick = () => {
         letter[3].innerHTML = "";
         letter[4].innerHTML = "";
         letter[5].innerHTML = "";
+        let nasilOldu = [
+          "Biçaklanarak",
+          "Silah ile",
+          "Asılarak",
+          "Boğularak",
+          "Uçurumdan düşerek",
+          "Fırlatılarak",
+        ];
+        let randomOlum = Math.floor(Math.random() * 6);
         olmeNedeni.innerHTML = nasilOldu[randomOlum];
+        uzuv[0].classList.remove("active");
+        uzuv[1].classList.remove("active");
+        uzuv[2].classList.remove("active");
+        uzuv[3].classList.remove("active");
+        uzuv[4].classList.remove("active");
+        uzuv[5].classList.remove("active");
       }
     }
   } else if (inputText.value.length == 1 && lettersCount == 2) {
@@ -166,6 +200,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[0].classList.add("active");
     } else if (
       letters[2][1] == inputText.value.toLocaleUpperCase() &&
       letter[1].innerHTML == ""
@@ -174,6 +209,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[1].classList.add("active");
     } else if (
       letters[2][2] == inputText.value.toLocaleUpperCase() &&
       letter[2].innerHTML == ""
@@ -182,6 +218,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[2].classList.add("active");
     } else if (
       letters[2][3] == inputText.value.toLocaleUpperCase() &&
       letter[3].innerHTML == ""
@@ -190,6 +227,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[3].classList.add("active");
     } else if (
       letters[2][4] == inputText.value.toLocaleUpperCase() &&
       letter[4].innerHTML == ""
@@ -198,6 +236,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[4].classList.add("active");
     } else if (
       letters[2][5] == inputText.value.toLocaleUpperCase() &&
       letter[5].innerHTML == ""
@@ -206,6 +245,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[5].classList.add("active");
     }
     for (let i = 0; i < letter.length; i++) {
       if (
@@ -224,7 +264,22 @@ testBtn.onclick = () => {
         letter[3].innerHTML = "";
         letter[4].innerHTML = "";
         letter[5].innerHTML = "";
+        let nasilOldu = [
+          "Biçaklanarak",
+          "Silah ile",
+          "Asılarak",
+          "Boğularak",
+          "Uçurumdan düşerek",
+          "Fırlatılarak",
+        ];
+        let randomOlum = Math.floor(Math.random() * 6);
         olmeNedeni.innerHTML = nasilOldu[randomOlum];
+        uzuv[0].classList.remove("active");
+        uzuv[1].classList.remove("active");
+        uzuv[2].classList.remove("active");
+        uzuv[3].classList.remove("active");
+        uzuv[4].classList.remove("active");
+        uzuv[5].classList.remove("active");
       }
     }
   } else if (inputText.value.length == 1 && lettersCount == 3) {
@@ -236,6 +291,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[0].classList.add("active");
     } else if (
       letters[3][1] == inputText.value.toLocaleUpperCase() &&
       letter[1].innerHTML == ""
@@ -244,6 +300,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[1].classList.add("active");
     } else if (
       letters[3][2] == inputText.value.toLocaleUpperCase() &&
       letter[2].innerHTML == ""
@@ -252,6 +309,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[2].classList.add("active");
     } else if (
       letters[3][3] == inputText.value.toLocaleUpperCase() &&
       letter[3].innerHTML == ""
@@ -260,6 +318,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[3].classList.add("active");
     } else if (
       letters[3][4] == inputText.value.toLocaleUpperCase() &&
       letter[4].innerHTML == ""
@@ -268,6 +327,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[4].classList.add("active");
     } else if (
       letters[3][5] == inputText.value.toLocaleUpperCase() &&
       letter[5].innerHTML == ""
@@ -276,6 +336,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[5].classList.add("active");
     }
     for (let i = 0; i < letter.length; i++) {
       if (
@@ -294,7 +355,22 @@ testBtn.onclick = () => {
         letter[3].innerHTML = "";
         letter[4].innerHTML = "";
         letter[5].innerHTML = "";
+        let nasilOldu = [
+          "Biçaklanarak",
+          "Silah ile",
+          "Asılarak",
+          "Boğularak",
+          "Uçurumdan düşerek",
+          "Fırlatılarak",
+        ];
+        let randomOlum = Math.floor(Math.random() * 6);
         olmeNedeni.innerHTML = nasilOldu[randomOlum];
+        uzuv[0].classList.remove("active");
+        uzuv[1].classList.remove("active");
+        uzuv[2].classList.remove("active");
+        uzuv[3].classList.remove("active");
+        uzuv[4].classList.remove("active");
+        uzuv[5].classList.remove("active");
       }
     }
   } else if (inputText.value.length == 1 && lettersCount == 4) {
@@ -306,6 +382,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[0].classList.add("active");
     } else if (
       letters[4][1] == inputText.value.toLocaleUpperCase() &&
       letter[1].innerHTML == ""
@@ -314,6 +391,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[1].classList.add("active");
     } else if (
       letters[4][2] == inputText.value.toLocaleUpperCase() &&
       letter[2].innerHTML == ""
@@ -322,6 +400,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[2].classList.add("active");
     } else if (
       letters[4][3] == inputText.value.toLocaleUpperCase() &&
       letter[3].innerHTML == ""
@@ -330,6 +409,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[3].classList.add("active");
     } else if (
       letters[4][4] == inputText.value.toLocaleUpperCase() &&
       letter[4].innerHTML == ""
@@ -338,6 +418,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[4].classList.add("active");
     } else if (
       letters[4][5] == inputText.value.toLocaleUpperCase() &&
       letter[5].innerHTML == ""
@@ -346,6 +427,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[5].classList.add("active");
     }
     for (let i = 0; i < letter.length; i++) {
       if (
@@ -364,7 +446,22 @@ testBtn.onclick = () => {
         letter[3].innerHTML = "";
         letter[4].innerHTML = "";
         letter[5].innerHTML = "";
+        let nasilOldu = [
+          "Biçaklanarak",
+          "Silah ile",
+          "Asılarak",
+          "Boğularak",
+          "Uçurumdan düşerek",
+          "Fırlatılarak",
+        ];
+        let randomOlum = Math.floor(Math.random() * 6);
         olmeNedeni.innerHTML = nasilOldu[randomOlum];
+        uzuv[0].classList.remove("active");
+        uzuv[1].classList.remove("active");
+        uzuv[2].classList.remove("active");
+        uzuv[3].classList.remove("active");
+        uzuv[4].classList.remove("active");
+        uzuv[5].classList.remove("active");
       }
     }
   } else if (inputText.value.length == 1 && lettersCount == 5) {
@@ -376,6 +473,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[0].classList.add("active");
     } else if (
       letters[5][1] == inputText.value.toLocaleUpperCase() &&
       letter[1].innerHTML == ""
@@ -384,6 +482,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[1].classList.add("active");
     } else if (
       letters[5][2] == inputText.value.toLocaleUpperCase() &&
       letter[2].innerHTML == ""
@@ -392,6 +491,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[2].classList.add("active");
     } else if (
       letters[5][3] == inputText.value.toLocaleUpperCase() &&
       letter[3].innerHTML == ""
@@ -400,6 +500,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[3].classList.add("active");
     } else if (
       letters[5][4] == inputText.value.toLocaleUpperCase() &&
       letter[4].innerHTML == ""
@@ -408,6 +509,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[4].classList.add("active");
     } else if (
       letters[5][5] == inputText.value.toLocaleUpperCase() &&
       letter[5].innerHTML == ""
@@ -416,6 +518,7 @@ testBtn.onclick = () => {
       scoreCount += 10;
       score.innerHTML = scoreCount;
       inputText.value = "";
+      uzuv[5].classList.add("active");
     }
     for (let i = 0; i < letter.length; i++) {
       if (
@@ -434,7 +537,22 @@ testBtn.onclick = () => {
         letter[3].innerHTML = "";
         letter[4].innerHTML = "";
         letter[5].innerHTML = "";
+        let nasilOldu = [
+          "Biçaklanarak",
+          "Silah ile",
+          "Asılarak",
+          "Boğularak",
+          "Uçurumdan düşerek",
+          "Fırlatılarak",
+        ];
+        let randomOlum = Math.floor(Math.random() * 6);
         olmeNedeni.innerHTML = nasilOldu[randomOlum];
+        uzuv[0].classList.remove("active");
+        uzuv[1].classList.remove("active");
+        uzuv[2].classList.remove("active");
+        uzuv[3].classList.remove("active");
+        uzuv[4].classList.remove("active");
+        uzuv[5].classList.remove("active");
       }
     }
   } else if (lettersCount == 6) {

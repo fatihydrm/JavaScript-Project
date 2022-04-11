@@ -99,6 +99,7 @@ body {
   height: 60px;
   border-radius: 50%;
   border: 4px solid #222;
+  opacity: 0;
 }
 
 .container .human .man .body {
@@ -106,6 +107,7 @@ body {
   height: 100px;
   background: #222;
   transform: translateY(-2px);
+  opacity: 0;
 }
 
 .container .human .man .left-hand {
@@ -114,6 +116,7 @@ body {
   background: #222;
   transform-origin: left center;
   transform: rotate(135deg) translate(-84px, 50px);
+  opacity: 0;
 }
 
 .container .human .man .right-hand {
@@ -122,6 +125,7 @@ body {
   background: #222;
   transform-origin: left center;
   transform: rotate(-135deg) translate(2px, 88px);
+  opacity: 0;
 }
 
 .container .human .man .left-foot {
@@ -130,6 +134,7 @@ body {
   background: #222;
   transform-origin: left center;
   transform: rotate(135deg) translate(-28px, -8px);
+  opacity: 0;
 }
 
 .container .human .man .right-foot {
@@ -138,6 +143,11 @@ body {
   background: #222;
   transform-origin: left center;
   transform: rotate(-135deg) translate(-54px, 30px);
+  opacity: 0;
+}
+
+.container .human .man .active {
+  opacity: 1;
 }
 
 .container .input {
@@ -241,7 +251,25 @@ body {
   bottom: 152px;
   right: 0px;
   font-weight: 500;
-  gap: 6px;
-  width: 220px;
+  gap: 3px;
+  width: 230px;
+}
+
+.kelimeler {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  top: 10px;
+  left: 10px;
+  width: 140px;
+  border: 1px solid #555;
+  letter-spacing: 1px;
+  padding: 5px;
+}
+
+.kelimeler p {
+  font-style: italic;
 }
 /*# sourceMappingURL=style.css.map */
