@@ -10,19 +10,32 @@
   <body>
     <div class="input-container">
       <label class="item"
-        >Blur:<input type="range" min="0" max="25" value="10" id="blur"
+        >Blur:<input
+          type="range"
+          name="blur"
+          min="0"
+          max="25"
+          value="5"
+          data-sizing="px"
       /></label>
       <label class="item"
-        >Size:<input type="range" min="0" max="200" value="10" id="size"
+        >Spacing:<input
+          type="range"
+          name="spacing"
+          min="0"
+          max="100"
+          value="10"
+          id="size"
+          data-sizing="px"
       /></label>
       <label class="item"
-        >Color: <input type="color" id="color" value="#ffc600"
+        >Color: <input type="color" name="base" id="color" value="#ffc600"
       /></label>
 
       <h1><span id="colorText">JavaScript</span> bir programlama dili.</h1>
     </div>
 
-    <img id="img" src="https://source.unsplash.com/7bwQXzbF6KE/500x300" />
+    <img id="img" src="bg.jpeg" />
 
     <script src="app.js"></script>
   </body>
