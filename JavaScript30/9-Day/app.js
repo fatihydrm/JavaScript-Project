@@ -10,6 +10,9 @@ function makeGreen() {
   p.style.transition = ".15s";
 }
 
+// clearing
+//console.clear();
+
 // Regular
 console.log("Hello");
 
@@ -37,9 +40,6 @@ console.info("Hmm");
 
 // Testing
 console.assert(1 === 1, "Bu bir hata mesajıdır");
-
-// clearing
-// console.clear();
 
 // Viewing DOM Elements
 const p = document.querySelector("#pElement");
@@ -72,7 +72,6 @@ function test() {
   console.timeEnd();
 }
 test();
-
 
 // table
 
