@@ -1,0 +1,18 @@
+function hideAllAlert() {
+  document.querySelectorAll(".allAlert").forEach((e) => {
+    const toast = new bootstrap.Toast(e);
+    toast.dispose();
+  });
+}
+document.querySelector("#btn1").addEventListener("click", (e) => {
+  const deleteAlert = document.getElementById("deleteAlert");
+  const toast = new bootstrap.Toast(deleteAlert);
+  hideAllAlert();
+  toast.show();
+});
+document.querySelector("#btn2").addEventListener("click", () => {
+  const addalert = document.getElementById("addAlert");
+  const toast = new bootstrap.Toast(addalert);
+  hideAllAlert();
+  toast.show();
+});
