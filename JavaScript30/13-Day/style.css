@@ -1,71 +1,59 @@
-* {
-  margin: 0;
-  padding: 0;
-  outline: none;
+html {
   box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: #ffc600;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  font-weight: 200;
 }
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
-html,
+
 body {
-  height: 100%;
-}
-body {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  background-color: #222;
-  gap: 10px;
-  padding: 20px;
+  margin: 0;
   overflow-x: hidden;
 }
-.item {
-  max-width: 4px;
-  min-height: 200px;
-  background-color: #eee;
-  position: relative;
-  display: grid;
-  place-items: center;
-  padding: 4px;
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
-.item > .inner {
-  background-color: #eee;
-  position: absolute;
-  display: flex;
-  height: 90%;
-  width: 300px;
-  padding: 20px;
-  border-radius: 2px;
-  font-weight: 500;
-  color: #444;
+
+h1 {
+  margin-top: 0;
+}
+
+.site-wrap {
+  max-width: 700px;
+  margin: 100px auto;
+  background: white;
+  padding: 40px;
+  text-align: justify;
+}
+
+.align-left {
+  float: left;
+  margin-right: 20px;
+}
+
+.align-right {
+  float: right;
+  margin-left: 20px;
+}
+
+.slide-in {
   opacity: 0;
-  pointer-events: none;
-  transition: 0.5s;
+  transition: all 0.5s;
 }
-.item > .inner.active {
+
+.align-left.slide-in {
+  transform: translateX(-30%) scale(0.95);
+}
+
+.align-right.slide-in {
+  transform: translateX(30%) scale(0.95);
+}
+
+.slide-in.active {
   opacity: 1;
-  pointer-events: inherit;
-}
-.item:nth-of-type(odd) > .inner {
-  left: calc(100% + 80px);
-  border-left: 6px solid goldenrod;
-}
-.item:nth-of-type(odd) > .inner.active {
-  left: calc(100% + 10px);
-}
-.item:nth-of-type(even) > .inner {
-  right: calc(100% + 80px);
-  border-right: 6px solid royalblue;
-}
-.item:nth-of-type(even) > .inner.active {
-  right: calc(100% + 10px);
+  transform: translateX(0%) scale(1);
 }
