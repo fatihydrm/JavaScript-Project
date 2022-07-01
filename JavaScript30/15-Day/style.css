@@ -130,3 +130,7 @@ input[type="checkbox"]:checked + label::before {
 .container > form > input[type="submit"]:hover {
   background-color: #eee;
 }
+.list {
+  max-height: 400px;
+  overflow-y: auto;
+}
