@@ -71,7 +71,6 @@ if (localStorage.getItem("data") == null) {
   itemsParse = JSON.parse(localStorage.getItem("data"));
   listed();
 }
-
 form.addEventListener("click", (e) => {
   e.preventDefault();
 });
@@ -85,16 +84,4 @@ form.children[1].addEventListener("click", () => {
     form.children[0].value = "";
     form.children[0].focus();
   }
-});
-let clearList = document.querySelector(".list");
-let removeBtn = document.querySelectorAll("li");
-removeBtn.forEach((e, i) => {
-  e.addEventListener("click", (e) => {
-    if (e.target.classList == "icon") {
-      itemsParse.splice(i, 1);
-      localStorage.setItem("data", JSON.stringify(itemsParse));
-      clearList.innerHTML = "";
-      listed();
-    }
-  });
 });
