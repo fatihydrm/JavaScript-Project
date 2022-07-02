@@ -1,5 +1,4 @@
 let form = document.querySelector("#form");
-let label = document.querySelectorAll(".label");
 let list = document.querySelector(".list");
 let itemsParse;
 let checkedControl;
@@ -21,7 +20,16 @@ let items = [
     name: "Hamburger",
     checked: true,
   },
+  {
+    name: "Lahmacun",
+    checked: false,
+  },
+  {
+    name: "Mantı",
+    checked: true,
+  },
 ];
+
 function html(item, i) {
   let html = `
   <input type="checkbox" ${checkedControl} id="item${i}" />
@@ -77,4 +85,16 @@ form.children[1].addEventListener("click", () => {
     form.children[0].value = "";
     form.children[0].focus();
   }
+});
+let clearList = document.querySelector(".list");
+let removeBtn = document.querySelectorAll("li");
+removeBtn.forEach((e, i) => {
+  e.addEventListener("click", (e) => {
+    if (e.target.classList == "icon") {
+      itemsParse.splice(i, 1);
+      localStorage.setItem("data", JSON.stringify(itemsParse));
+      clearList.innerHTML = "";
+      listed();
+    }
+  });
 });

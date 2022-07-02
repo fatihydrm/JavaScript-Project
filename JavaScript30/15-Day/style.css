@@ -91,6 +91,15 @@ body {
   fill: #fff;
   border-radius: 3px;
   transition: 0.15s;
+  position: relative;
+  user-select: none;
+}
+.container > ul > li > .icon::after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  inset: 0;
 }
 .container > ul > li > .icon:hover,
 .container > ul > li > .icon:active {
