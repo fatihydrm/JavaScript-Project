@@ -1,7 +1,7 @@
 const targetImg = document.querySelector("#img");
 
 let options = {
-  // etkilenicek elemanın kasayıcısı
+  // etkilenicek elemanın kapsayıcısı
   root: document.querySelector("#scrollArea"),
   // etkilenicek etki meselafesi elemanın mesefesi
   rootMargin: "100px",
